@@ -1,0 +1,1394 @@
+<partialmodel version="0.2">
+  <subprofiles>
+    <subprofile id="DDV04360012" name="belimo.pr-bac-mod-kpi.device" version="1.0">
+      <aspects>
+        <aspectref id="default" version="0.3"/>
+        <aspectref id="mpslavedevice" version="0.1"/>
+        <aspectref id="mpslavepoolaccess" version="0.1"/>
+        <aspectref id="eepromAccess" version="0.1"/>
+        <aspectref id="belimoassistant" version="0.1"/>
+        <aspectref id="bMg3Fgui" version="0.1"/>
+      </aspects>
+      <datapoints>
+        <datapoint id="ActWriteSequenceNumber">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">NfcDeviceWriteSequenceNumber</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">4</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">ActWriteSequenceNumber</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="ActWriteOperationInProgress">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">NfcDeviceWriteOperationInProgress</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">5</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">ActWriteOperationInProgress</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="NfcReadOnlyFlag">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">SelectNfcAccessType</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">6</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">NfcReadOnlyFlag</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="NfcWriteSequenceNumber">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">NfcMobileAppWriteSequenceNumber</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">7</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">NfcWriteSequenceNumber</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="NfcWriteOperationInProgress">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">NfcMobileAppWriteOperationInProgress</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">8</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">NfcWriteOperationInProgress</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="SerialNumber">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">DeviceMpSerialNumber</aspectvalue>
+            <aspectvalue feature="basetype">text</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.serialnumber</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">00444-30039-163-089</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavedevice">
+            <aspectvalue feature="read-command-id">MP_Get_SeriesNo</aspectvalue>
+            <aspectvalue feature="read-command-code">50</aspectvalue>
+            <aspectvalue feature="read-param-range">[0, 6]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">9</aspectvalue>
+            <aspectvalue feature="numberOfBytes">7</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">SerialNumber</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="SICRandom">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">NfcSecurityIdentificationCode</aspectvalue>
+            <aspectvalue feature="basetype">text</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.b64binary</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+            <aspectvalue feature="privacy">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">null</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+            <aspectvalue feature="sendToCloud">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">10010</aspectvalue>
+            <aspectvalue feature="param-range">[0,11]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">16</aspectvalue>
+            <aspectvalue feature="numberOfBytes">12</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">SICRandom</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="MpAddress">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">DeviceMpAddress</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;1|0|4|8|12|128|132|136|140|3|7|11|15|131|135|139|143</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavedevice">
+            <aspectvalue feature="read-command-id">MP_Get_MP_Address</aspectvalue>
+            <aspectvalue feature="read-command-code">13</aspectvalue>
+            <aspectvalue feature="read-param-range">[0, 0]</aspectvalue>
+            <aspectvalue feature="write-command-id">MP_Set_MP_Address</aspectvalue>
+            <aspectvalue feature="write-command-code">38</aspectvalue>
+            <aspectvalue feature="write-param-range">[0, 0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">87</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">MpAddress</aspectvalue>
+            <aspectvalue feature="enumeration">1|0|4|8|12|128|132|136|140|3|7|11|15|131|135|139|143</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="Location">
+          <aspectvalues aspect="default">
+             <aspectvalue feature="name">SetDeviceInstallationLocation</aspectvalue>
+            <aspectvalue feature="basetype">text</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+            <aspectvalue feature="privacy">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">Belimo Hinwil "Test"</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">100</aspectvalue>
+            <aspectvalue feature="param-range">[0,15]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">71</aspectvalue>
+            <aspectvalue feature="numberOfBytes">16</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">Location</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="DeviceType">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">DeviceType</aspectvalue>
+            <aspectvalue feature="basetype">text</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">PR24A-MF</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">50003</aspectvalue>
+            <aspectvalue feature="param-range">[0,21]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">28</aspectvalue>
+            <aspectvalue feature="numberOfBytes">22</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">DeviceType</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="Y1Y2Line">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">Y1_Y2Line</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2|3</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">15</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">Y1_Y2Line</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2|3</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="ActualPosition">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">ActualPosition</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint16</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.fixpt;scaling=0.01;offset=0.0;dp=0</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+            <aspectvalue feature="unit">percent</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">10</aspectvalue>
+            <aspectvalue feature="param-range">[0,1]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">ActualPosition</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="ExclusiveWrite">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">ExclusiveWrite</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+            <aspectvalue feature="privacy">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavedevice">
+            <aspectvalue feature="read-command-id">MP_ExclusivWrite</aspectvalue>
+            <aspectvalue feature="read-command-code">5</aspectvalue>
+            <aspectvalue feature="read-param-template">[0]</aspectvalue>
+            <aspectvalue feature="read-param-range">[0, 0]</aspectvalue>
+            <aspectvalue feature="write-command-id">MP_ExclusivWrite</aspectvalue>
+            <aspectvalue feature="write-command-code">5</aspectvalue>
+            <aspectvalue feature="write-param-range">[0, 0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">ExclusiveWrite</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="ToolOverride">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">ToolOverride</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2|6</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">19</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">ToolOverride</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2|6</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="RunningTime">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">RunningTime</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint16</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+            <aspectvalue feature="unit">second</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">66</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">101</aspectvalue>
+            <aspectvalue feature="param-range">[0,1]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">91</aspectvalue>
+            <aspectvalue feature="numberOfBytes">2</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">RunningTime</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="MaxOperatingAngle">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">MaxOperatingAngle</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint16</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.fixpt;scaling=0.01;offset=0.0;dp=0</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+            <aspectvalue feature="unit">percent</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">8800</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">102</aspectvalue>
+            <aspectvalue feature="param-range">[0,1]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">97</aspectvalue>
+            <aspectvalue feature="numberOfBytes">2</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">MaxOperatingAngle</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="ValvePar">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">ValvePar</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;3|1|2</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">3</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">146</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">206</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">ValvePar</aspectvalue>
+            <aspectvalue feature="enumeration">3|1|2</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="ControlType">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">ControlType</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;170|106|166</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">106</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">103</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">88</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">ControlType</aspectvalue>
+            <aspectvalue feature="enumeration">170|106|166</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="SetPointInverted">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">SetPointInverted</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">104</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">89</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">SetPointInverted</aspectvalue>
+            <aspectvalue feature="enumeration">0|1</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="FeedbackInverted">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">FeedbackInverted</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">105</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">90</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">FeedbackInverted</aspectvalue>
+            <aspectvalue feature="enumeration">0|1</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="Y3RangeStart">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">Y3RangeStart</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint16</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+            <aspectvalue feature="unit">millivolt</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">2000</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">106</aspectvalue>
+            <aspectvalue feature="param-range">[0,1]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">99</aspectvalue>
+            <aspectvalue feature="numberOfBytes">2</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">Y3RangeStart</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="Y3RangeDelta">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">Y3RangeDelta</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint16</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+            <aspectvalue feature="unit">millivolt</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">8000</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">107</aspectvalue>
+            <aspectvalue feature="param-range">[0,1]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">101</aspectvalue>
+            <aspectvalue feature="numberOfBytes">2</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">Y3RangeDelta</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="U5RangeStart">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">U5RangeStart</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint16</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+            <aspectvalue feature="unit">millivolt</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">2000</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">108</aspectvalue>
+            <aspectvalue feature="param-range">[0,1]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">103</aspectvalue>
+            <aspectvalue feature="numberOfBytes">2</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">U5RangeStart</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="U5RangeDelta">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">U5RangeDelta</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint16</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+            <aspectvalue feature="unit">millivolt</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">8000</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">109</aspectvalue>
+            <aspectvalue feature="param-range">[0,1]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">105</aspectvalue>
+            <aspectvalue feature="numberOfBytes">2</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">U5RangeDelta</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="FailOfControlY3ZS1">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">FailOfControlY3_ZS1</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2|6</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">155</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">236</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">FailOfControlY3_ZS1</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2|6</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="FailOfControlY3ZS2">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">FailOfControlY3_ZS2</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2|6</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">156</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">237</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">FailOfControlY3_ZS2</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2|6</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="BusWatchdog">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">BusWatchdog</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2|3</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">168</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">243</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">BusWatchdog</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2|3</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="SetpointSource">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">SetpointSource</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">1</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">148</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">232</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">SetpointSource</aspectvalue>
+            <aspectvalue feature="enumeration">0|1</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="BusProtocol">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">BusProtocol</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">149</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">233</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">BusProtocol</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="RS485Address">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">RS485Address</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">152</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">114</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">RS485Address</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="RS485Baudrate">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">RS485Baudrate</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2|3|4</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">153</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">115</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">RS485Baudrate</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2|3|4</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="RS485Termination">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">RS485Termination</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">154</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">116</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">RS485Termination</aspectvalue>
+            <aspectvalue feature="enumeration">0|1</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="BACnetMaxMaster">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">BACnetMaxMaster</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">121</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">117</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">BACnetMaxMaster</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="BACnetObjectIdentifier">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">BACnetObjectIdentifier</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">119</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">118</aspectvalue>
+            <aspectvalue feature="numberOfBytes">4</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">BACnetObjectIdentifier</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="BACnetObjectName">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">BACnetObjectName</aspectvalue>
+            <aspectvalue feature="basetype">text</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">null</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">120</aspectvalue>
+            <aspectvalue feature="param-range">[0,31]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">122</aspectvalue>
+            <aspectvalue feature="numberOfBytes">32</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">BACnetObjectName</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="RS485Parity">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">RS485Parity</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2|3</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">151</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">235</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">RS485Parity</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2|3</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="ExtTempSensor1">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">ExtTempSensor1</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">96100</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">13</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">ExtTempSensor1</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="ExtTempSensor2">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">ExtTempSensor2</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">135300</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">14</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">ExtTempSensor2</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="SensorUnits">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">SensorUnits</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">int8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="sendToCloud">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">SensorUnits</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="TypeExtTempSensor1">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">TypeExtTempSensor1</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2|3|4|5|6|7|8</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">1</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">111</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">109</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">TypeExtTempSensor1</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2|3|4|5|6|7|8</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="TypeExtTempSensor2">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">TypeExtTempSensor2</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2|3|4|5|6|7|8</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">2</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">112</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">110</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">TypeExtTempSensor2</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2|3|4|5|6|7|8</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="PowerSupplyType">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">PowerSupplyType</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.enum;0|1|2|3|4|5|6</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">4</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">24</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">PowerSupplyType</aspectvalue>
+            <aspectvalue feature="enumeration">0|1|2|3|4|5|6</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="CntMotorStartStop">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">CntMotorStartStop</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">765</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">330</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">224</aspectvalue>
+            <aspectvalue feature="numberOfBytes">4</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">CntMotorStartStop</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="CntChangeDir">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">CntChangeDir</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">327</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">331</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">228</aspectvalue>
+            <aspectvalue feature="numberOfBytes">4</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">CntChangeDir</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="CntUnexpectedOverload">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">CntUnexpectedOverload</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">325</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">207</aspectvalue>
+            <aspectvalue feature="numberOfBytes">1</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">CntUnexpectedOverload</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="CntPowerFail">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">CntPowerFail</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint16</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">12</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">323</aspectvalue>
+            <aspectvalue feature="param-range">[0,1]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">203</aspectvalue>
+            <aspectvalue feature="numberOfBytes">2</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">CntPowerFail</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="PoweredOnTime">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">PoweredOnTime</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint16</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.fixpt;scaling=4.00;offset=0.0;dp=0</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+            <aspectvalue feature="unit">hour</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">482</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">20</aspectvalue>
+            <aspectvalue feature="param-range">[0,1]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">50</aspectvalue>
+            <aspectvalue feature="numberOfBytes">2</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">PoweredOnTime</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="ActiveTime">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">ActiveTime</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint16</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+            <aspectvalue feature="unit">hour</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">123</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">21</aspectvalue>
+            <aspectvalue feature="param-range">[0,1]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">52</aspectvalue>
+            <aspectvalue feature="numberOfBytes">2</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">ActiveTime</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="CntEndStopPos1">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">CntEndStopPos1</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">234</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">328</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">216</aspectvalue>
+            <aspectvalue feature="numberOfBytes">4</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">CntEndStopPos1</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="CntEndStopPos2">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">CntEndStopPos2</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">456</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">329</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">220</aspectvalue>
+            <aspectvalue feature="numberOfBytes">4</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">CntEndStopPos2</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="MaxUtilizationUp">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">MaxUtilizationUp</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">95</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">124</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">188</aspectvalue>
+            <aspectvalue feature="numberOfBytes">4</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">MaxUtilizationUp</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="MaxUtilizationDown">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">MaxUtilizationDown</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">75</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">125</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">192</aspectvalue>
+            <aspectvalue feature="numberOfBytes">4</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">MaxUtilizationDown</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="MaxUtilizationUpCopy">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">MaxUtilizationUpCopy</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">95</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">124</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">188</aspectvalue>
+            <aspectvalue feature="numberOfBytes">4</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">MaxUtilizationUpCopy</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="MaxUtilizationDownCopy">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">MaxUtilizationDownCopy</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">75</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">125</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">192</aspectvalue>
+            <aspectvalue feature="numberOfBytes">4</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">normal</aspectvalue>
+            <aspectvalue feature="displayname">MaxUtilizationDownCopy</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="SoftwareVersion">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">SoftwareVersion</aspectvalue>
+            <aspectvalue feature="basetype">text</aspectvalue>
+            <aspectvalue feature="format">application/vnd.belimo.firmwareversion</aspectvalue>
+            <aspectvalue feature="access">r</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">50000</aspectvalue>
+            <aspectvalue feature="param-range">[0,4]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="eepromAccess">
+            <aspectvalue feature="eepromOffset">248</aspectvalue>
+            <aspectvalue feature="numberOfBytes">5</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">Vx.xx</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">SoftwareVersion</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="NFCSilent">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">NFCSilent</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint32</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">312</aspectvalue>
+            <aspectvalue feature="param-range">[0,3]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">0</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+            <aspectvalue feature="sendToCloud">false</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">NFCSilent</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+        <datapoint id="ColdStart">
+          <aspectvalues aspect="default">
+            <aspectvalue feature="name">ColdStart</aspectvalue>
+            <aspectvalue feature="basetype">int</aspectvalue>
+            <aspectvalue feature="restriction">uint8</aspectvalue>
+            <aspectvalue feature="access">rw</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="mpslavepoolaccess">
+            <aspectvalue feature="pool-id">166</aspectvalue>
+            <aspectvalue feature="param-range">[0,0]</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="belimoassistant">
+            <aspectvalue feature="sampleValue">1</aspectvalue>
+            <aspectvalue feature="refreshOnConfigurationWrite">true</aspectvalue>
+            <aspectvalue feature="sendToCloud">false</aspectvalue>
+            <aspectvalue feature="closeNfcConnectionOnWrite">true</aspectvalue>
+          </aspectvalues>
+          <aspectvalues aspect="bMg3Fgui">
+            <aspectvalue feature="visibility">hide</aspectvalue>
+            <aspectvalue feature="displayname">Coldstart</aspectvalue>
+          </aspectvalues>
+        </datapoint>
+      </datapoints>
+    </subprofile>
+  </subprofiles>
+  <dataprofiles>
+    <dataprofile id="DDV04360012" name="belimo.pr-bac-mod-kpi.device" version="1.0">
+      <properties>
+        <property key="dhv">0x04</property>
+        <property key="ddv">0x360012</property>
+      </properties>
+      <subprofiles>
+        <subprofileref id="default" version="0.1"/>
+        <subprofileref id="DDV04360012" version="1.0"/>
+      </subprofiles>
+    </dataprofile>
+  </dataprofiles>
+</partialmodel>
